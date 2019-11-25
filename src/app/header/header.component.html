@@ -1,0 +1,18 @@
+<div class="header" align="center">
+
+  <div class="logo">
+    <img src="assets/logo.svg">
+  </div>
+
+  <h1>Data Analytics Tool</h1>
+
+  <div class="container">
+    <input type="file" name="file" ng2FileSelect [uploader]="uploader" />
+    <button type="button" class="btn btn-success btn-s"
+            (click)="uploader.uploadAll()"
+            [disabled]="!uploader.getNotUploadedItems().length" >
+      Upload a CSV file
+    </button>
+  </div>
+
+</div>

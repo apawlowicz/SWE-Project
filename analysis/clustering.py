@@ -59,7 +59,7 @@ print("Average values per cluster:", file=output_file)
 print(table, file=output_file)
 
 for k in range(true_k):
-    table_example = PrettyTable(data.columns.values.tolist())
+    table = PrettyTable(data.columns.values.tolist())
     print("Cluster " + str(k), file=output_file)
     for i in range(0,min(num_examples,clusters[k].shape[0])):
         item = clusters[k][i]
@@ -67,5 +67,5 @@ for k in range(true_k):
         for idx,element in enumerate(unscaled): #todo! replace this with a np.where command
             if(element == item.tolist()):
                 location = idx
-        table_example.add_row(original_data.values.tolist()[location])
-    print(table_example, file=output_file)
+        table.add_row(original_data.values.tolist()[location])
+    print(table, file=output_file)

@@ -1,0 +1,709 @@
+LOSS_EVNT_NUM
+PA0017755838    2
+PA0017721062    2
+PA0017719735    2
+PA0017734368    2
+PA0017713104    2
+               ..
+PA0017749095    1
+PA0017747682    1
+PA0017727102    1
+CA0017741192    1
+PA0017741417    1
+Name: LOSS_EVNT_NUM, Length: 12495, dtype: int64
+-----------
+LOSS_DT
+01/10/2018 00:01:00    492
+01/09/2018 00:01:00    456
+01/18/2018 00:01:00    455
+01/03/2018 00:01:00    448
+01/11/2018 00:01:00    447
+                      ... 
+01/12/2018 06:16:00      1
+01/23/2018 17:20:00      1
+01/03/2018 18:00:00      1
+01/18/2018 15:15:00      1
+01/25/2018 13:30:00      1
+Name: LOSS_DT, Length: 661, dtype: int64
+-----------
+CDC_DESC
+Hit/run struck parked IV-IV unoccupied           1322
+IV struck object off road-No damage to object    1002
+OV struck standing IV in rear-2 veh only          680
+IV struck standing OV in rear-2 veh only          621
+IV struck object in road-No damage to object      603
+                                                 ... 
+IV caused accident - No contact                     1
+Storm excluding hail                                1
+Total theft-Recovered                               1
+Unloading                                           1
+Passenger in IV caught finger in door               1
+Name: CDC_DESC, Length: 94, dtype: int64
+-----------
+LOSS_LOC_STR1_ADDR
+unk                 81
+UNK                 41
+Unknown             33
+Unk                 23
+Main Street         18
+                    ..
+401 Mission Arch     1
+Heading  S 441       1
+Hopeman Parkway      1
+I-104                1
+1320 W Henry St      1
+Name: LOSS_LOC_STR1_ADDR, Length: 10633, dtype: int64
+-----------
+LOSS_LOC_CITY_NM
+Unknown            169
+unk                143
+Las Vegas          139
+Chicago            114
+Los Angeles        101
+                  ... 
+Kapolei              1
+Roseville,           1
+Richland Center      1
+Callahan             1
+Trinidad             1
+Name: LOSS_LOC_CITY_NM, Length: 4311, dtype: int64
+-----------
+LOSS_LOC_ST_ABBR
+CA    1603
+FL     978
+TX     872
+NY     792
+PA     595
+WA     569
+IL     563
+AZ     511
+CT     479
+MI     409
+MD     340
+VA     278
+NV     258
+CO     257
+OH     253
+GA     245
+NC     239
+SC     230
+IN     202
+MO     195
+MN     174
+OR     165
+NM     159
+NJ     156
+WV     132
+TN     112
+WI     112
+KY     110
+LA     105
+AR      99
+UT      97
+DE      97
+NH      96
+VT      92
+AL      87
+MT      82
+OK      81
+ME      78
+MA      74
+HI      74
+MS      67
+KS      64
+ID      58
+IA      55
+DC      53
+NE      47
+RI      32
+AK      32
+WY      30
+ND      28
+SD      22
+PR       3
+QC       2
+ON       2
+BC       1
+MM       1
+AA       1
+AE       1
+GU       1
+Name: LOSS_LOC_ST_ABBR, dtype: int64
+-----------
+LOSS_LOC_ZIP_CD
+90210         10
+98387          7
+85374          7
+60451          7
+29576          6
+              ..
+85353          1
+85335-5032     1
+77532          1
+12943          1
+44085          1
+Name: LOSS_LOC_ZIP_CD, Length: 3911, dtype: int64
+-----------
+CLM_ID
+Y94AC34818    1
+Y2AAC66377    1
+Y2AAC67259    1
+Y81AC89996    1
+Y2DAC09107    1
+             ..
+Y81AC91418    1
+Y94AC35631    1
+Y2AAC65820    1
+Y81AC86897    1
+Y84AC95443    1
+Name: CLM_ID, Length: 12550, dtype: int64
+-----------
+CLM_STTS_DESC
+Closed    12545
+Open          5
+Name: CLM_STTS_DESC, dtype: int64
+-----------
+CLM_SUBRO_OPEN_DT
+02/22/2018 09:52:27    2
+02/02/2018 15:27:21    2
+03/30/2018 10:08:14    2
+02/07/2018 11:34:01    2
+01/29/2018 13:11:12    2
+                      ..
+01/25/2018 12:55:30    1
+02/21/2018 13:02:02    1
+02/20/2018 07:02:12    1
+01/31/2018 13:43:05    1
+02/08/2018 07:27:40    1
+Name: CLM_SUBRO_OPEN_DT, Length: 2781, dtype: int64
+-----------
+CLM_CRT_DT
+01/02/2018 16:27:09    2
+01/02/2018 10:15:20    2
+01/18/2018 15:36:34    2
+01/29/2018 18:30:33    2
+01/23/2018 15:09:20    2
+                      ..
+01/05/2018 17:12:38    1
+01/23/2018 18:10:16    1
+05/02/2018 11:08:40    1
+01/17/2018 16:28:43    1
+02/05/2018 12:48:12    1
+Name: CLM_CRT_DT, Length: 12475, dtype: int64
+-----------
+FRST_RSRV_DT
+01/09/2018 07:45:41    2
+01/09/2018 13:06:15    2
+01/16/2018 13:17:56    2
+01/23/2018 15:17:20    2
+01/27/2018 11:23:27    2
+                      ..
+01/16/2018 10:26:54    1
+01/05/2018 17:12:38    1
+01/23/2018 18:10:16    1
+05/02/2018 11:08:40    1
+02/05/2018 12:48:12    1
+Name: FRST_RSRV_DT, Length: 12475, dtype: int64
+-----------
+CLM_FIRST_INDEM_PD_DT
+1/31/2018 12:00:00.000000 AM     430
+1/30/2018 12:00:00.000000 AM     427
+1/25/2018 12:00:00.000000 AM     415
+2/1/2018 12:00:00.000000 AM      414
+1/26/2018 12:00:00.000000 AM     401
+                                ... 
+7/5/2018 12:00:00.000000 AM        1
+10/29/2018 12:00:00.000000 AM      1
+12/27/2018 12:00:00.000000 AM      1
+9/7/2018 12:00:00.000000 AM        1
+8/13/2018 12:00:00.000000 AM       1
+Name: CLM_FIRST_INDEM_PD_DT, Length: 250, dtype: int64
+-----------
+CLM_LAST_CLS_DT
+02/02/2018 13:10:56    2
+01/11/2018 12:18:10    2
+02/07/2018 09:02:27    2
+01/17/2018 08:21:56    2
+01/11/2018 17:37:26    2
+                      ..
+02/09/2018 11:06:30    1
+02/15/2018 14:53:41    1
+02/09/2018 08:49:44    1
+08/06/2018 15:54:07    1
+02/12/2018 16:24:13    1
+Name: CLM_LAST_CLS_DT, Length: 12516, dtype: int64
+-----------
+CLM_FRST_CLS_DT
+01/25/2018 11:16:23    2
+01/22/2018 13:54:33    2
+01/11/2018 17:37:26    2
+01/29/2018 10:13:32    2
+02/02/2018 13:10:56    2
+                      ..
+05/30/2018 14:16:21    1
+01/31/2018 18:12:53    1
+01/18/2018 08:54:44    1
+05/09/2018 17:59:09    1
+02/12/2018 16:24:13    1
+Name: CLM_FRST_CLS_DT, Length: 12515, dtype: int64
+-----------
+CLM_DEFND_ATTY_REP_IND
+N    12439
+Y      111
+Name: CLM_DEFND_ATTY_REP_IND, dtype: int64
+-----------
+POL_ID
+20CSES24103    17
+16CSES34200    16
+83CSES39501     9
+57UENFM1633     9
+30CSEMG3261     6
+               ..
+55PHF802586     1
+55PHF985118     1
+55PHK139951     1
+72UECZN3804     1
+72PH 925115     1
+Name: POL_ID, Length: 12104, dtype: int64
+-----------
+POL_EFF_DT
+10/01/2017 00:01:00    195
+04/01/2017 00:01:00    194
+01/01/2018 00:01:00    178
+07/01/2017 00:01:00    171
+05/01/2017 00:01:00    164
+                      ... 
+05/24/2017 00:00:00      1
+04/27/2018 00:01:00      1
+08/28/2017 00:00:00      1
+05/19/2017 00:00:00      1
+07/03/2017 00:00:00      1
+Name: POL_EFF_DT, Length: 433, dtype: int64
+-----------
+POL_EXP_DT
+04/01/2018 00:00:59    203
+10/01/2018 00:00:59    185
+07/01/2018 00:00:59    176
+01/01/2019 00:00:59    172
+05/01/2018 00:00:59    170
+                      ... 
+10/26/2018 00:00:00      1
+02/06/2018 00:00:00      1
+06/01/2018 00:00:00      1
+10/17/2018 00:00:00      1
+08/03/2018 00:00:00      1
+Name: POL_EXP_DT, Length: 431, dtype: int64
+-----------
+COV_ID_CD
+           12546
+UNKNOWN        4
+Name: COV_ID_CD, dtype: int64
+-----------
+COV_TYP_DESC
+Collision                            12194
+Michigan Broad Collision               320
+Michigan Broad Collision Coverage       25
+Garage Keepers Collision                 6
+UNKNOWN                                  4
+Michigan Limited Collision               1
+Name: COV_TYP_DESC, dtype: int64
+-----------
+POL_COV_LMT_AMT
+50,000       6
+25,000       5
+1,000,000    5
+20,000       4
+35,000       4
+60,000       3
+70,000       3
+80,000       3
+39,000       2
+75,000       2
+98,000       2
+15,000       2
+65,000       2
+120,000      2
+30,000       2
+4,500        1
+210,000      1
+600          1
+37,700       1
+84,000       1
+16,000       1
+45,000       1
+85,000       1
+10,000       1
+13,000       1
+17,500       1
+52,300       1
+93,500       1
+46,000       1
+36,000       1
+56,000       1
+18,549       1
+34,000       1
+31,000       1
+34,500       1
+105,000      1
+26,000       1
+55,510       1
+39,500       1
+96,000       1
+226,590      1
+86,000       1
+18,999       1
+16,700       1
+212,000      1
+100,000      1
+40,000       1
+43,000       1
+25,967       1
+12,000       1
+7,000        1
+33,000       1
+219,858      1
+29,300       1
+Name: POL_COV_LMT_AMT, dtype: int64
+-----------
+DED_AMT
+500        7170
+1,000      2356
+250        1409
+475         361
+200         308
+100         220
+975          98
+225          87
+477          79
+2,000        72
+300          66
+5,000        47
+400          47
+50           40
+227          24
+250,000      20
+500,000      17
+2,500        16
+175          15
+0            13
+750          13
+977           9
+480           7
+25,000        6
+3,000         5
+1,500         5
+10,000        5
+100,000       5
+75            4
+999           4
+177           3
+77            2
+150,000       2
+230           2
+982           2
+980           1
+232           1
+482           1
+772           1
+Name: DED_AMT, dtype: int64
+-----------
+CLAIMANT_ID
+148,332,501    2
+148,353,624    2
+149,360,233    2
+149,633,762    2
+148,295,635    2
+              ..
+148,388,785    1
+148,941,293    1
+149,277,700    1
+148,934,990    1
+148,443,812    1
+Name: CLAIMANT_ID, Length: 12497, dtype: int64
+-----------
+CLMNT_CITY_NM
+Kansas City    84
+LAS VEGAS      69
+Chicago        68
+Las Vegas      60
+Los Angeles    53
+               ..
+Umatilla        1
+Hollister       1
+CLACKAMAS       1
+OLIVEHURST      1
+HANFORD         1
+Name: CLMNT_CITY_NM, Length: 5507, dtype: int64
+-----------
+CLMNT_ST_ABBR
+CA    1580
+FL     904
+TX     843
+NY     790
+PA     602
+WA     588
+IL     584
+CT     491
+AZ     476
+MI     423
+MD     341
+VA     281
+MO     266
+CO     261
+OH     249
+NV     238
+GA     226
+NC     224
+SC     222
+IN     194
+MN     184
+NM     164
+NJ     159
+OR     153
+WV     136
+WI     119
+TN     114
+VT     110
+KY     107
+NH     105
+DE     104
+UT     103
+AR     101
+LA      91
+OK      88
+AL      86
+MT      85
+ME      76
+KS      71
+HI      70
+MS      68
+ID      61
+MA      55
+IA      49
+NE      48
+DC      41
+RI      36
+AK      36
+WY      33
+ND      28
+SD      25
+ON       1
+PR       1
+QC       1
+Name: CLMNT_ST_ABBR, dtype: int64
+-----------
+VEH_MAKE_NM_DESC
+Toyota           1846
+Ford             1560
+Chevrolet        1409
+Honda            1007
+Nissan            667
+Hyundai           574
+Dodge             428
+UNKNOWN           425
+KIA               369
+Lexus             363
+Subaru            362
+Buick             318
+GMC               313
+Chrysler          294
+Jeep              282
+Mercedes Benz     261
+Cadillac          251
+Undetermined      216
+BMW               190
+Lincoln           167
+Volkswagen        151
+Mazda             148
+Acura             103
+Mercury            95
+Rambler            94
+Audi               93
+Infiniti           83
+Pontiac            63
+Mitsubishi         53
+Volvo              52
+Saturn             50
+Mini Cooper        30
+Jaguar             30
+Land Rover         28
+Mertz              22
+Freightliner       20
+Suzuki             18
+Oldsmobile         16
+Porsche            14
+Isuzu              11
+Fiat               10
+International       9
+HINO                6
+Saab                5
+Hino                5
+Kenworth            3
+Smart               3
+Hummer              3
+Peterbilt           2
+Utilimaster         2
+Other               2
+Plymouth            1
+Desoto              1
+Champion            1
+Daewoo              1
+Mack                1
+Cedarapids          1
+Studebaker          1
+GEO                 1
+Name: VEH_MAKE_NM_DESC, dtype: int64
+-----------
+VEH_MODEL_NM
+UNKNOWN            425
+SILVERADO K1500    153
+PRIUS              147
+F150 SUPERCREW     127
+CAMRY LE XLE SE    126
+                  ... 
+Pickup F250          1
+500X TREKKING        1
+911/TARGA            1
+XJ6                  1
+S5 PREMIUM PLUS      1
+Name: VEH_MODEL_NM, Length: 2265, dtype: int64
+-----------
+VEH_YR
+2015    1211
+2016    1146
+2017    1114
+2014    1016
+2013     925
+2012     788
+2008     680
+2011     668
+2007     641
+2010     613
+2006     546
+2005     479
+2009     471
+UNK      425
+2004     391
+2003     333
+2002     219
+2018     180
+2000     167
+2001     165
+1999      97
+1998      69
+1997      52
+1996      42
+1995      31
+1994      21
+1991      12
+1993      10
+1992       7
+1989       4
+1990       4
+1987       3
+1988       3
+1985       2
+1984       2
+1972       2
+1964       2
+1982       1
+1981       1
+1974       1
+1973       1
+1986       1
+1978       1
+1932       1
+1968       1
+1963       1
+Name: VEH_YR, dtype: int64
+-----------
+VEH_TYP_NM
+Passenger Car                  9157
+Pickup Truck                   1356
+Truck                           478
+UNKNOWN                         425
+Van                             424
+Commercial Vehicle              350
+Motor Home                       41
+Camper / Trailer                 30
+Other                            22
+Bus                               8
+Truck Tractor                     6
+Sport Utility Vehicle (SUV)       6
+Trailer                           3
+Hearse                            3
+Antique/Classic                   1
+Semi Trailer                      1
+ATV                               1
+Name: VEH_TYP_NM, dtype: int64
+-----------
+VIN
+UNKNOWN              425
+1HGCR3F88HA018397      3
+3FADP0M3XAR195762      3
+1G4ZP5SS7HU161895      3
+5YFBU4EE2DP198066      3
+                    ... 
+JTDKN3DU0D5589505      1
+1G11C5SA5GU119950      1
+1FTZR45E56PA63894      1
+2G4WD582971131147      1
+JTHCM1D23G5007278      1
+Name: VIN, Length: 11972, dtype: int64
+-----------
+CLM_TTL_INC_AMT
+0        2617
+75         37
+50         13
+1,014       8
+747         8
+         ... 
+7,053       1
+2,042       1
+399         1
+6,404       1
+3,365       1
+Name: CLM_TTL_INC_AMT, Length: 6114, dtype: int64
+-----------
+CLM_TTL_OTSTND_RSRV_AMT
+0        10697
+35          13
+164          7
+593          7
+599          6
+         ...  
+1,891        1
+1,505        1
+431          1
+186          1
+1,208        1
+Name: CLM_TTL_OTSTND_RSRV_AMT, Length: 1116, dtype: int64
+-----------
+CLM_TTL_PAID_AMT
+0         2621
+75          37
+50          13
+1,014        8
+747          8
+          ... 
+7,426        1
+2,373        1
+6,096        1
+30,621       1
+23,435       1
+Name: CLM_TTL_PAID_AMT, Length: 6083, dtype: int64
+-----------
+CLM_TTL_RECOVY_AMT
+0         8966
+200         48
+275         31
+300         31
+100         30
+          ... 
+10,800       1
+12,400       1
+2,489        1
+4,088        1
+11,100       1
+Name: CLM_TTL_RECOVY_AMT, Length: 2051, dtype: int64
+-----------
