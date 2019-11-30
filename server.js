@@ -13,7 +13,7 @@ let storage = multer.diskStorage({
     cb(null, DIR);
   },
   filename: (req, file, cb) => {
-    cb(null, file.fieldname + '-' + Date.now() + '.' + path.extname(file.originalname));
+    cb(null, file.originalname);
   }
 });
 let upload = multer({storage: storage});
