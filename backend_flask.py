@@ -14,20 +14,12 @@ api = Api(app)
 CORS(app)
 
 @app.route("/")
-def hello():
-    return jsonify({'text':'Hello World!'})
-
-class Employees(Resource):
-    def get(self):
-        return {'employees': [{'id':1, 'name':'Balram'},{'id':2, 'name':'Tom'}]} 
-
-class Employees_Name(Resource):
+class frequencyList(Resource):
     def get(self, file):
         return jsonify(getFrequencies(file))       
 
 
-api.add_resource(Employees, '/employees') # Route_1
-api.add_resource(Employees_Name, '/employees/<file>') # Route_3
+api.add_resource(frequencyList, '/frequencies/<file>')
 
 
 if __name__ == '__main__':
