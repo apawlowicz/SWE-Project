@@ -3,6 +3,10 @@ from flask_cors import CORS, cross_origin
 from flask_restful import Resource, Api
 from json import dumps
 from flask_jsonpify import jsonify
+import sys
+
+sys.path.insert(1, 'analysis')
+from frequencies import getFrequencies
 
 app = Flask(__name__)
 api = Api(app)
@@ -18,14 +22,12 @@ class Employees(Resource):
         return {'employees': [{'id':1, 'name':'Balram'},{'id':2, 'name':'Tom'}]} 
 
 class Employees_Name(Resource):
-    def get(self, employee_id):
-        print('Employee id:' + employee_id)
-        result = {'data': {'id':1, 'name':'Balram'}}
-        return jsonify(result)       
+    def get(self, file):
+        return jsonify(getFrequencies(file))       
 
 
 api.add_resource(Employees, '/employees') # Route_1
-api.add_resource(Employees_Name, '/employees/<employee_id>') # Route_3
+api.add_resource(Employees_Name, '/employees/<file>') # Route_3
 
 
 if __name__ == '__main__':

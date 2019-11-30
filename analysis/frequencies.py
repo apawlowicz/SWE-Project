@@ -7,18 +7,13 @@ import matplotlib.pyplot as plt
 
 #By William Fraher
 
-parser = argparse.ArgumentParser(description="Generates a correlation matrix for a given file.")
-parser.add_argument("--file", required=True, default="policy_data.csv", help="File upon which to perform analysis")
-parser.add_argument("--threshold", required=False, default=0.1, type=float, help="Minimum value for correlations to be printed.")
+def getFrequencies(file):
+    print(file)
+    
+    data = pd.read_csv("uploads/" + file, encoding="ISO-8859-1")
 
-args = parser.parse_args()
-file = args.file
-threshold = args.threshold
-
-print(file)
-data = pd.read_csv(file, encoding="ISO-8859-1")
-
-for column in data.columns:
-    print(column)
-    print(data[column].value_counts())
-    print('-----------')
+    counts = {}
+    for column in data.columns:
+        counts[column] = data[column].value_counts().tolist()
+    
+    return counts
