@@ -22,13 +22,6 @@ data = pd.read_csv(file, encoding="ISO-8859-1")
 
 output_file = open("frequencies.txt","w",encoding="ISO-8859-1")
 for column in data.columns:
-    '''
-    table = PrettyTable()
-    table.add_row(data[column].value_counts().index.tolist())
-    table.add_row(data[column].value_counts().tolist())
-    print(column, file=output_file)
-    print(table, file=output_file)
-    '''
     print(column, file=output_file)
     print(data[column].value_counts().index.tolist()[0:maximum], file=output_file)
     print(data[column].value_counts().tolist()[0:maximum], file=output_file)
