@@ -22,7 +22,7 @@ export class MainAnalyticsComponent implements OnInit {
   }
 
   transformText(){
-    this.text = this.response.stringify();
+    this.text = this.response.toString();
     console.log(this.response);
   }
 
