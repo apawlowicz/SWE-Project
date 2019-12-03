@@ -1,11 +1,11 @@
 .header {
-  background-color: white;
+  background-color: dodgerblue;
   height: 15vh;
   padding: 1vh;
   margin: -15px;
   color: #3a5a78;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   border-bottom: 1px solid white;
 }
 

@@ -13,6 +13,8 @@ import { FileUploadComponent } from './util/file-upload/file-upload.component';
 import { FileSelectDirective } from 'ng2-file-upload';
 import { HttpClientModule } from '@angular/common/http';
 
+import { WeatherService } from './weather.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

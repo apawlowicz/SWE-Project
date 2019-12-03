@@ -1,6 +1,12 @@
+<script src="node_modules/chart.js/Chart.min.js"></script>
+<script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+
+
 <div class="mainscreen">
 
-  <button (click)="getText()">activate</button>
-  {{text}}
+  <button (click)="getResults()">activate</button>
+  <br>
+
+  <canvas id="bar-chart-horizontal"></canvas>
 
 </div>
