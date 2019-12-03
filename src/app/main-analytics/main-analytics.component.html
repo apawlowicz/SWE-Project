@@ -1,12 +1,20 @@
 <script src="node_modules/chart.js/Chart.min.js"></script>
 <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
 
+<form [formGroup]="analyticsForm">
+  <div class="mainscreen">
 
-<div class="mainscreen">
+    <button (click)="getResults()">activate</button>
+    <button (click)="buildChart()">build chart</button>
 
-  <button (click)="getResults()">activate</button>
-  <br>
+    <select class="custom-select" formControlName="column_selected">
+      <option value="" disabled>Select a column</option>
+      <option *ngFor="let element of columns" [ngValue]="element">{{element}}</option>
+    </select>
 
-  <canvas id="bar-chart-horizontal"></canvas>
+    <br>
 
-</div>
+    <canvas id="bar-chart-horizontal"></canvas>
+
+  </div>
+</form>

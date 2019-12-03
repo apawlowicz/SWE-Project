@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import 'rxjs/add/operator/map';
 import { Chart } from 'chart.js';
 import { WeatherService } from '../weather.service';
+import {FormGroup, ReactiveFormsModule} from '@angular/forms';
+import { FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-main-analytics',
@@ -12,9 +14,14 @@ import { WeatherService } from '../weather.service';
 })
 export class MainAnalyticsComponent implements OnInit {
 
-  response: JSON;
-
+  columns = [];
+  analyticsForm = new FormGroup({
+      column_selected : new FormControl('', Validators.required)
+  });
   chart = [];
+  frequencies = [];
+  indices = [];
+  response = {};
 
   constructor(private weather: WeatherService, private httpClient: HttpClient) {
   }
@@ -25,35 +32,38 @@ export class MainAnalyticsComponent implements OnInit {
   getResults() {
     this.weather.dailyForecast()
         .subscribe(res => {
-          let frequencies = res['CDC_DESC'][0];
-          let indices = res['CDC_DESC'][1];
-          console.log(frequencies);
-          console.log(indices);
+            this.response = res;
+            this.columns = Object.keys(res);
+            this.analyticsForm.get('column_selected').setValue(this.columns[0]); //default
+        });
+  }
 
-          this.chart = new Chart(document.getElementById("bar-chart-horizontal"), {
-            type: 'horizontalBar',
-            data: {
-              labels: indices,
+  buildChart(){
+
+      this.frequencies = this.response[this.analyticsForm.get('column_selected').value][0];
+      this.indices = this.response[this.analyticsForm.get('column_selected').value][1];
+
+      this.chart = new Chart(document.getElementById("bar-chart-horizontal"), {
+          type: 'horizontalBar',
+          data: {
+              labels: this.indices,
               datasets: [
-                {
-                  label: "Elements of " + "CDC_DESC",
-                  backgroundColor: "#3e95cd",
-                  borderWidth: 25,
-                  data: frequencies
-                }
+                  {
+                      label: "Elements of " + this.analyticsForm.get('column_selected').value,
+                      backgroundColor: "#3e95cd",
+                      borderWidth: 25,
+                      data: this.frequencies
+                  }
               ]
-            },
-            options: {
+          },
+          options: {
               legend: { display: false },
               title: {
-                display: true,
-                text: 'Frequencies of each element of ' + "CDC_DESC"
+                  display: true,
+                  text: 'Frequencies of each element of ' + this.analyticsForm.get('column_selected').value
               }
-            }
-          });
-
-
-        });
+          }
+      });
   }
 
 }
