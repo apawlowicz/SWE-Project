@@ -6,6 +6,7 @@ import { Chart } from 'chart.js';
 import { WeatherService } from '../weather.service';
 import {FormGroup, ReactiveFormsModule} from '@angular/forms';
 import { FormControl, Validators} from '@angular/forms';
+import {HeaderAnalyticsServiceService} from '../header-analytics-service.service';
 
 @Component({
   selector: 'app-main-analytics',
@@ -23,11 +24,14 @@ export class MainAnalyticsComponent implements OnInit {
   indices = [];
   response = {};
 
-  constructor(private weather: WeatherService, private httpClient: HttpClient) {
-  }
-
   ngOnInit() {
   }
+
+    constructor(private weather: WeatherService, private httpClient: HttpClient, private headerAnalyticsServiceService:HeaderAnalyticsServiceService) {
+        this.headerAnalyticsServiceService.onUpload$.subscribe(res => {
+            this.getResults();
+    });
+    }
 
   getResults() {
     this.weather.dailyForecast()

@@ -9,7 +9,7 @@
   <div class="container">
     <input type="file" name="file" ng2FileSelect [uploader]="uploader" />
     <button type="button" class="btn btn-success btn-s"
-            (click)="uploader.uploadAll()"
+            (click)="onUpload()"
             [disabled]="!uploader.getNotUploadedItems().length" >
       Upload a CSV file
     </button>

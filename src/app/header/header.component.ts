@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit} from '@angular/core';
 import {FileUploader} from 'ng2-file-upload';
+import {HeaderAnalyticsServiceService} from '../header-analytics-service.service';
 
 const URL = 'http://localhost:4000/api/upload';
 
@@ -10,9 +11,10 @@ const URL = 'http://localhost:4000/api/upload';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private headerAnalyticsServiceService: HeaderAnalyticsServiceService) { }
 
   public uploader: FileUploader = new FileUploader({ url: URL, itemAlias: 'file' });
+  public onClick = new EventEmitter();
 
   ngOnInit() {
     this.uploader.onAfterAddingFile = (file) => { file.withCredentials = false; };
@@ -20,6 +22,11 @@ export class HeaderComponent implements OnInit {
       console.log('fileUpload:uploaded:', item, status, response);
       alert('File uploaded successfully');
     };
+  }
+
+  onUpload(){
+    this.uploader.uploadAll();
+    this.headerAnalyticsServiceService.onUpload$.emit(true);
   }
 
 }
