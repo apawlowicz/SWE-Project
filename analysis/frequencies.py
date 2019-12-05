@@ -15,8 +15,8 @@ def getFrequencies(file):
     counts = {}
     for column in data.columns:
         entry = []
-        entry.append(data[column].value_counts().tolist())
-        entry.append(data[column].value_counts().index.tolist())
+        entry.append(data[column].value_counts().tolist()[0:min(len(data[column].value_counts().tolist()),10)])
+        entry.append(data[column].value_counts().index.tolist()[0:min(len(data[column].value_counts().index.tolist()),10)])
         counts[column] = entry
     
     return counts

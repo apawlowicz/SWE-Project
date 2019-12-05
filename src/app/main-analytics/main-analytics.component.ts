@@ -17,12 +17,14 @@ export class MainAnalyticsComponent implements OnInit {
 
   columns = [];
   analyticsForm = new FormGroup({
-      column_selected : new FormControl('', Validators.required)
+      column_selected : new FormControl('', Validators.required),
+      chart_type_selected : new FormControl('bar', Validators.required)
   });
-  chart = [];
+  chart : Chart;
   frequencies = [];
   indices = [];
   response = {};
+  chart_types = ['bar','pie']
 
   ngOnInit() {
   }
@@ -46,6 +48,9 @@ export class MainAnalyticsComponent implements OnInit {
 
       this.frequencies = this.response[this.analyticsForm.get('column_selected').value][0];
       this.indices = this.response[this.analyticsForm.get('column_selected').value][1];
+      if(this.chart) {
+          this.chart.destroy();
+      }
 
       this.chart = new Chart(document.getElementById("bar-chart-horizontal"), {
           type: 'horizontalBar',
