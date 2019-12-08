@@ -16,6 +16,7 @@ CORS(app)
 @app.route("/")
 class frequencyList(Resource):
     def get(self, file):
+        print(file)
         return jsonify(getFrequencies(file))       
 
 

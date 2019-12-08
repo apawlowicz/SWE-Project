@@ -10,13 +10,13 @@ import matplotlib.pyplot as plt
 def getFrequencies(file):
     print(file)
     
-    data = pd.read_csv("uploads/" + file, encoding="ISO-8859-1")
+    data = pd.read_csv("uploads/" + file, encoding="ISO-8859-1", header=0)
 
     counts = {}
     for column in data.columns:
         entry = []
-        entry.append(data[column].value_counts().tolist()[0:min(len(data[column].value_counts().tolist()),10)])
-        entry.append(data[column].value_counts().index.tolist()[0:min(len(data[column].value_counts().index.tolist()),10)])
+        entry.append(data[column].value_counts().tolist())
+        entry.append(data[column].value_counts().index.tolist())
         counts[column] = entry
     
     return counts

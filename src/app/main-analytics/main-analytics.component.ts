@@ -18,13 +18,14 @@ export class MainAnalyticsComponent implements OnInit {
   columns = [];
   analyticsForm = new FormGroup({
       column_selected : new FormControl('', Validators.required),
-      chart_type_selected : new FormControl('bar', Validators.required)
+      chart_type_selected : new FormControl('Bar chart', Validators.required),
+      num_examples : new FormControl(10, Validators.required)
   });
   chart : Chart;
   frequencies = [];
   indices = [];
   response = {};
-  chart_types = ['bar','pie']
+  chart_types = ['Bar chart','Pie chart', 'Polar Area Chart', 'Radar Chart']
 
   ngOnInit() {
   }
@@ -44,16 +45,32 @@ export class MainAnalyticsComponent implements OnInit {
         });
   }
 
+  getChartType(){
+      if(this.analyticsForm.get('chart_type_selected').value == 'Bar chart'){
+          return 'horizontalBar';
+      }
+      else if(this.analyticsForm.get('chart_type_selected').value == 'Pie chart'){
+          return 'pie';
+      }
+      else if(this.analyticsForm.get('chart_type_selected').value == 'Polar Area Chart'){
+          return 'polarArea';
+      }
+      else if(this.analyticsForm.get('chart_type_selected').value == 'Radar Chart'){
+          return 'radar';
+      }
+      return 'horizontalBar'; //default
+  }
+
   buildChart(){
 
-      this.frequencies = this.response[this.analyticsForm.get('column_selected').value][0];
-      this.indices = this.response[this.analyticsForm.get('column_selected').value][1];
+      this.frequencies = this.response[this.analyticsForm.get('column_selected').value][0].slice(0,this.analyticsForm.get('num_examples').value);
+      this.indices = this.response[this.analyticsForm.get('column_selected').value][1].slice(0,this.analyticsForm.get('num_examples').value);
       if(this.chart) {
           this.chart.destroy();
       }
 
-      this.chart = new Chart(document.getElementById("bar-chart-horizontal"), {
-          type: 'horizontalBar',
+      this.chart = new Chart(document.getElementById("chart"), {
+          type: this.getChartType(),
           data: {
               labels: this.indices,
               datasets: [

@@ -4,16 +4,34 @@
 <form [formGroup]="analyticsForm">
   <div class="mainscreen">
 
-    <button (click)="buildChart()">build chart</button>
+    <div class="row">
+      <div class="column">
+        <button (click)="buildChart()">Build Chart</button>
+      </div>
 
-    <select class="custom-select" formControlName="column_selected">
-      <option value="" disabled>Select a column</option>
-      <option *ngFor="let element of columns" [ngValue]="element">{{element}}</option>
-    </select>
+      <div class="column">
+        <select class="custom-select" formControlName="column_selected">
+          <option value="" disabled>Select a column</option>
+          <option *ngFor="let element of columns" [ngValue]="element">{{element}}</option>
+        </select>
+      </div>
+
+      <div class="column">
+        <select class="custom-select" formControlName="chart_type_selected">
+          <option value="" disabled>Chart type</option>
+          <option *ngFor="let type of chart_types" [ngValue]="type">{{type}}</option>
+        </select>
+      </div>
+
+      <div class="column">
+        <input type="number" formControlName="num_examples">
+      </div>
+
+    </div>
 
     <br>
 
-    <canvas id="bar-chart-horizontal"></canvas>
+    <canvas id="chart"></canvas>
 
   </div>
 </form>
